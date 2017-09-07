@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "1005991451047",
+    "firebase_url": "https://realtime-database-39e6b.firebaseio.com",
+    "project_id": "realtime-database-39e6b",
+    "storage_bucket": "realtime-database-39e6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005991451047:android:b7f9c97242a4a8be",
+        "android_client_info": {
+          "package_name": "com.ekosp.realtimedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005991451047-fv5m2ah0h3liqg1p9q503h39ltq6rk1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOaB4Wp5smpyH2oSdlpyYVwwlBh3NmkJY"
+        },
+        {
+          "current_key": "AIzaSyA4X6hLtuB7xaApJ2eGFGkd0gzeFe6IjZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
