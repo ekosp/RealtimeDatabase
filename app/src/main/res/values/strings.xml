@@ -3,6 +3,9 @@
     <string name="name">Nama</string>
     <string name="email">Email</string>
     <string name="action_save">Simpan</string>
+    <string name="action_add_new">Tambah Baru</string>
+    <string name="action_update">Update Data</string>
+
     <string name="google_api_key2">AIzaSyA67FV6yDIvGu9-sf4Rtm0uZ9XMFF3Q4bE</string>
 
     <string name="action_clear">Clear</string>

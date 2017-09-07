@@ -105,6 +105,7 @@ public class MapViewFragment extends Fragment implements
             }
         });
 
+
         return rootView;
     }
 

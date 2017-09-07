@@ -16,6 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DatabaseActivity extends AppCompatActivity {
 
     private static final String TAG = DatabaseActivity.class.getSimpleName();
@@ -79,14 +82,13 @@ public class DatabaseActivity extends AppCompatActivity {
         });
         toggleButton();
 
-       if (savedInstanceState == null) {
+      /* if (savedInstanceState == null) {
             android.support.v4.app.Fragment fragment = new MapViewFragment();
-            //fragment.setArguments(arguments);
             android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
             fm.beginTransaction()
                     .replace(R.id.frameLayout, fragment)
                     .commit();
-        }
+        }*/
     }
 
     // Changing button text
@@ -109,7 +111,7 @@ public class DatabaseActivity extends AppCompatActivity {
             userId = mFirebaseDatabase.push().getKey();
         }
 
-        User user = new User(name, email);
+        User user = new User(name, email, null, null );
 
         mFirebaseDatabase.child(userId).setValue(user);
 
@@ -153,5 +155,31 @@ public class DatabaseActivity extends AppCompatActivity {
             mFirebaseDatabase.child(userId).child("name").setValue(name);
         if (!TextUtils.isEmpty(email))
             mFirebaseDatabase.child(userId).child("email").setValue(email);
+    }
+
+
+
+    public void btn_add_new(View v) {
+        Log.i(TAG, "tambah baru custom user");
+
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("");
+        DatabaseReference usersRef = ref.child("users");
+
+        Map<String, User> users = new HashMap<String, User>();
+        users.put("ekosp", new User("June 23, 1912", "Alan Turing", "adadad", "adasdad"));
+        usersRef.push().setValue(users);
+    }
+
+    public void btn_update(View v) {
+        Log.i(TAG, "update custom user");
+
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("/users");
+
+        Map<String, Object> nicknames = new HashMap<String, Object>();
+        nicknames.put("ekosp/email", "hello@555555.com");
+        nicknames.put("ekosp/name", "Eko Setyo 55555555");
+        ref.updateChildren(nicknames);
     }
 }
