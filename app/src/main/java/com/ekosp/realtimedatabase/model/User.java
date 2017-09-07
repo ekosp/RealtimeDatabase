@@ -27,4 +27,20 @@ public class User {
         this.longitude = longi;
         this.latitude = lati;
     }
+
+    public static String stringName() {
+        return "name";
+    }
+
+    public static  String stringEmail() {
+        return "email";
+    }
+
+    public static String stringLongitude() {
+        return "longitude";
+    }
+
+    public static String stringLatitude() {
+        return "latitude";
+    }
 }
